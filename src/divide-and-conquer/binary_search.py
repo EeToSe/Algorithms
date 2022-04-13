@@ -16,5 +16,6 @@ if __name__ == '__main__':
     n = int(input())
     arr = list(map(int, input().strip().split(' ')))
     x = int(input())
+
     # index = binary_search(1,[1,2,3,4],0,3)
     # print(index)
