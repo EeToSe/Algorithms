@@ -145,7 +145,7 @@ class BSTNode(object):
             return self
 
         # Case 3: node has two children
-        # Find the next larger(dont have the left child - proof by contradiciton)
+        # Find the next larger(dont have the left child - proof by contradiction)
         next_larger = self.next_larger()
         next_larger.key, self.key = self.key, next_larger.key
         return next_larger.delete()
@@ -234,7 +234,7 @@ class BST(object):
         if node is None:
             return None
         # Special case: root node has no parent 
-        # which may casuse None violation in Case 1 or 2 
+        # which may cause None violation in Case 1 or 2 
         if node is self.root:
             # create a sentinel node and link with the root
             sentinel = self.klass(None, 0)
@@ -242,6 +242,7 @@ class BST(object):
             self.root.parent = sentinel
             deleted = self.root.delete()
             self.root = sentinel.left
+            # unlink the sentinel node
             if self.root is not None:
                 self.root.parent = None
             sentinel.left = None
