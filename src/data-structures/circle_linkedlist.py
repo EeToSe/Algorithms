@@ -1,6 +1,3 @@
-# Definition for singly-linked list.
-from DoubleLinkedList import MyLinkedList
-
 class ListNode(object):
     def __init__(self, x):
         self.val = x
